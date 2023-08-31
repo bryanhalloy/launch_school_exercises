@@ -1,0 +1,7 @@
+In the vast %{adjective} Atlantic Ocean, the Titanic, a majestic %{noun}, set sail on its maiden voyage. Passengers were excitedly %{verb} on board, dreaming of the adventure ahead.
+
+As the Titanic %{adverb} glided through the water, passengers marveled at its %{adjective} design. Laughter filled the air as people explored the %{noun} decks.
+
+Tragedy struck when the Titanic struck an iceberg. Water %{verb} in, and despite %{adjective} efforts, the ship %{verb} beneath the waves.
+
+Through courage and sacrifice, passengers and crew %{adverb} came together. The Titanic's story remains a %{noun} of human vulnerability and history's lessons.
