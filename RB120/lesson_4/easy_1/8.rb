@@ -1,0 +1,1 @@
+self refers to the calling class, which will be class Cat. 

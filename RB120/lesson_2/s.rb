@@ -1,23 +1,28 @@
-class Animal
-  def move
+module Describable
+  def describe_shape
+    "I am a #{self.class} and have #{self.class::SIDES} sides."
   end
 end
 
-class Fish < Animal
-  def move
-    puts "swim"
+class Shape
+  include Describable
+
+  def self.sides
+    self::SIDES
   end
 end
 
-class Cat < Animal
-  def move
-    puts "walk"
+class Quadrilateral < Shape
+  SIDES = 4
+
+  def sides 
+    SIDES
   end
 end
 
-# Sponges and Corals don't have a separate move method - they don't move
-class Sponge < Animal; end
-class Coral < Animal; end
+class Square < Quadrilateral; end
 
-animals = [Fish.new, Cat.new, Sponge.new, Coral.new]
-animals.each { |animal| animal.move }
+
+p Square.sides # => 4 OK
+p Square.new.sides # => 4 needs a method
+p Square.new.describe_shape # => "I am a Square and have 4 sides."
