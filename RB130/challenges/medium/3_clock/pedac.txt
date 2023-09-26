@@ -1,0 +1,89 @@
+P
+Create a clock that is independent of date.
+
+Requirements
+
+Should be independent of date
+You should be able to add minutes to and subtract minutes from the time represented by a given Clock object. 
+Note that you should not mutate Clock objects when adding and subtracting minutes -- create a new Clock object.
+Two clock objects that represent the same time should be equal to each other.
+You may not use any built-in date or time functionality; just use arithmetic operations.
+
+=/ should print in normal HH:MM format with leading zeroes. Should be a to_s method. 
+=/ + method to add minutes
+=/ - method
+=/ adding over the hour mark of course jumps to the next hour
+=/ after hour 23, goes to 00
+=/ eearlier than 00, goes to 23
+=/ define equivalence ==
+How do we handle 00:00?
+
+Assumptions:
+No decimals
+No input validation
+
+
+E
+
+
+
+D
+class Clock
+Clock::at(hour) 
+Clock::at(hour,minute)
+Class#+
+Class#-
+Class#==
+Class#to_s
+
+
+A -----------------------
+
+
+class AbsoluteMins
+  initialize with an hour and minute input
+    abolutemins = mins + hours * 60
+  
+  hour
+    division
+
+  minute
+    mod
+
+  +
+    add minutes
+
+  - subtract minutes
+
+
+
+class Clock
+
+def self.at(hour, minute=0)
+  initialize a new clock object with given hour, minute
+
+def initialize(h, m)
+
+
+
+  @h = h
+  @m = m
+
+def +
+  absolutemins +
+
+def -
+  absolutemins -
+
+def ==
+  absolutemins.hour and abolutemins.min equal eachother
+
+to_s
+  format hour and number
+
+
+
+
+
+
+C

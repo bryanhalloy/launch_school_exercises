@@ -1,0 +1,39 @@
+Write a program to determine whether a triangle is equilateral, isosceles, or scalene.
+
+An equilateral triangle has all three sides the same length.
+
+An isosceles triangle has exactly two sides of the same length.
+
+A scalene triangle has all sides of different lengths.
+
+Note: For a shape to be a triangle at all, all sides must be of length > 0, and the sum of the lengths of any two sides must be greater than the length of the third side.
+
+P
+== Need a method or test that returns triangle type
+
+Implied:
+== can take floats
+== negative sides raises argument error
+== 0 len sides raises argument error
+
+E
+test for illegal triangles (lengths)
+== test for string input
+== test for too many arguments
+== test for nil sides
+== test to ensure sides are numbers
+
+
+
+
+
+D
+Define class triangle
+define lots of private methods with tests that raise various errors and checks
+
+
+A
+
+
+
+C

@@ -1,0 +1,80 @@
+P
+Make a diamond
+
+Input: letter
+Return: diamond string, in shape per below
+Output: none
+
+
+
+Requirements:
+== The first row contains one 'A'.
+== The last row contains one 'A'.
+== All rows, except the first and last, have exactly two identical letters.
+== The diamond is horizontally symmetric.
+== The diamond is vertically symmetric.
+== The diamond has a square shape (width equals height).
+== The letters form a diamond shape.
+== The top half has the letters in ascending order.
+== The bottom half has the letters in descending order.
+== The four corners (containing the spaces) are triangles.
+== Each line ends with \n
+
+
+Ignoring:
+input validation
+Letters beyond Z
+
+
+
+E
+C
+
+  A
+ B B
+C   C
+ B B
+  A
+
+Can duplicate lines
+iterate backwards down a list from starting letter
+A given letter string is the same no matter the size, but has extra leading and trailing spaces
+
+D
+Diamond
+Diamond::make_diamond
+array of letters in alpha order
+
+
+A
+initialze letters array, using caps and in alpha order
+
+determine full width
+    index*2 + 1
+
+initialize diamond string to ''
+
+for each element in array from a to input letter
+  build line
+  append line to build up string 
+
+
+for each element in array from input letter less one to a
+  build line
+  append line to build up string 
+
+build line
+  char + spaces*index + char
+  center 
+  append \n to line
+
+return diamond string
+
+
+
+make helper methods private
+
+
+
+
+C

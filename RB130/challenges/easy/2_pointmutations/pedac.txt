@@ -1,0 +1,57 @@
+
+
+
+
+P
+Objective: Compute hamming distance of two stands
+Input: two strings
+Return: a > 0 integer
+Output: nothing
+
+Explicit requirements
+- By counting the number of differences between two homologous DNA strands taken from different genomes with a common ancestor, we the Hamming distance.
+- The Hamming distance is only defined for sequences of equal length. 
+- If you have two sequences of unequal length, you should compute the Hamming distance over the shorter length. (Ignore length on the longer strand)
+
+
+Implicit requirements
+== We need a DNA object, which intakes a string and stores it as a DNA strand
+== We need DNA#hamming_distance(other_dna_string)
+== An entire string can have a hamming distance equal to size
+== Do not mutate the original strand
+
+Assumed requirements
+== Need a way to return string version of a DNA strand
+== Assume no input validation (test for strings, etc.) 
+==  If one of the strings are empty, hamming_distance will be zero
+
+
+E
+GAGCCTACTAACGGGAT
+CATCGTAATGACGGCCT
+^ ^ ^  ^ ^    ^^
+
+7. Basically, if the corresponding values at a given index are different, we add 1 to the hamming distance. 
+
+I checked, and it does to account for point deletions. 
+
+
+D
+== DNA class
+== Store strings as arrays (easier to iterate through)
+= Store a counter which is returned at the end of the method
+== Need a method to return the dna_string
+
+A
+= Define class DNA
+=  Constructor method that stores string as array var
+
+= DNA#hamming_distance(other_dna_string)
+= convert other_dna_string to array
+= find and assign the shortest array
+= initialize counter
+= iterate through shortest array
+=   add one to counter if values are not equal
+=  return counter
+
+C

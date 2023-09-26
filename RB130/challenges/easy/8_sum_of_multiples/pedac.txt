@@ -1,0 +1,45 @@
+P
+Write a program that, given a natural number and a set of one or more other numbers, can find the sum of all the multiples of the numbers in the set that are less than the first number. If the set of numbers is not given, use a default set of 3 and 5.
+
+Input: natural number and array of other numbers
+Return: integer
+Output: nothing
+
+Requirements:
+=/ If the set of numbers is not given, use a default set of 3 and 5
+=/ The divisor set is stored in a SumOfMultiples object
+=/ Return 0 if no multiples fit
+=/ Remember, multiples less than (no equal to) the input number
+=/ Sum of unique mulitples (filter out duplicates)
+
+Ignoring:
+Iput validation -  
+  Input must be a natural number
+  Divors must be natural numbers
+
+E
+
+
+
+D
+SumOfMultiples
+  @array of divisors
+SumOfMultiples#to
+
+
+A
+Instantiate class object
+  assume [3,5] if empty
+  make reader method
+
+instance method to
+  multiples array set to zero
+  for each number in input array
+    1 up to input number
+      test if iter % divisor == 0
+      if yes, shovel into factors array
+  factors.uniq.sum
+
+
+
+C

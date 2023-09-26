@@ -1,0 +1,56 @@
+
+
+P
+Write a program that takes a word and a list of possible anagrams and selects the correct sublist that contains the anagrams of the word.
+
+inputs - a string (multi case), and an array of strings
+return value - an array of strings (valid anagrams)
+output - nothing
+
+explicit requirements:
+
+
+
+implicit requirements:
+/return empty array if no matches
+/identical word is not an anagram
+/a subset is not an anagram
+
+
+assumed requirements:
+Assume no punctiation or spaces. No validation input. 
+/a one-letter word cannot have anagrams because self cant be anagram
+/an empty input word has no anagrams
+/case insensitive
+== no punctuation
+== no spaces on input
+/multi words in list are outputted just once
+
+
+
+E
+For example, given the word "listen" and a list of candidates like "enlists", "google", "inlets", and "banana", the program should return a list containing "inlets". Please read the test suite for the exact rules of anagrams.
+
+
+
+D
+Anagram class
+Anagram#match(input_array)
+
+
+A
+remove duplicates in test array
+convert target word to downcase array and sort
+iterate (select) through each test_word in input array
+  downcase test word
+  if unsorted target word = test word, break and set false
+  
+  assume true
+  convert test word to array and sort
+  iterate through each index in test_word
+    if test at index = target at index next
+    if not, break and set flag to false
+done
+
+
+C

@@ -1,0 +1,61 @@
+P
+
+Inputs: Nothing, just call a method
+Return: A unique, randomized name
+Output: nothing
+
+Requirements
+Names should be random and not follow a predicatable sequence. 
+Names shoudl have 2 A_Z letters and 3 numbers 0_9
+Name should be assigned at instantiation of robot object, and stick
+Invoking name should return a copy of the name string, not a pointer to the name instance variable collaborator object
+
+Assumptions
+
+
+
+E
+Key thing is to store list of names as a class var, and keep trying until get a new one if one is already taken
+
+
+D
+class Robot
+Robot#name
+Robot#reset
+
+
+A
+class Robot
+  class var, array to store names
+
+def initialize
+  generate name
+  assign name to instance var
+  shovel name into class var - array of names
+
+def generate name naive
+  sample letter (x2)
+  sample number (x3)
+  combine them
+
+def generate name
+  loop
+    generate name
+    check if name is in class var array of names
+    return name if not
+  end
+  
+
+def reset
+  generate name
+  assign it to instance var
+
+def name
+  get robot name
+  return a copy of the string (new object)
+
+Make private as needed
+
+
+C
+

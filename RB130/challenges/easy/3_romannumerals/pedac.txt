@@ -1,0 +1,100 @@
+
+
+P
+Objective: Write some code that converts modern decimal numbers into their Roman number equivalents.
+Inputs: An integer between 1 and 3000
+Return: A string with the roman numeral equivalent
+Output: none
+
+
+Requirements:
+Explicit
+=+ No numbers greater than 3000
+Use letters  I, V, X, L, C, D, M
+Modern Roman numerals ... are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero.
+
+Implicit
+I is 1
+II is 2
+III is 3
+IV is 4
+V is 5
+
+Smaller valued letters to the right of a big letter add value to it, and to the left detract from it
+These "sections" are per each largest valued letter
+
+Assumed
+No numbers less than 1 (no zero or negative)
+
+E
+ 1  => I
+10  => X
+ 7  => VII
+
+1990
+1000=M
+900=CM
+90=XC
+
+2008
+2000=MM
+8=VIII
+
+1-3 is base I
+4 is base V with base I negs
+5 - 8 is base v with base I adds
+9 is base X with base I negs
+10 - 13 is base X with base I adds
+14-19 is base X with base V adds/negs
+20 is base X with another base X
+21 is base X with an 11
+
+
+Ones digit realms
+
+nil 0
+I 1-3
+V 4-8
+X 9
+
+Tens digit realms
+X 1-3
+L 4-8
+C 9-10
+
+Hundreds digit realms
+C 1-3
+D 4-8
+M 9-10
+
+Thousands digit realms
+M 1-3
+
+
+
+
+
+D
+RomanNumeral class
+RomanNumeral#to_roman
+An array for each realm that stores the letters for that realm
+A hash of realm arrays
+
+A
+Start with the ones digit
+Access the ones realm array
+  get the string for that value
+  add it in to our string
+  subtract the value for the original value
+Go to the next digit place
+and the next
+and the next
+
+return the string
+
+
+
+
+
+
+C

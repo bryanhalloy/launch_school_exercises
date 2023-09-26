@@ -1,0 +1,51 @@
+
+
+P
+Implement octal to decimal conversion
+
+Input: octal string
+return: decimal int
+output: nothing
+
+Requirements:
+=/ your program should produce a decimal output
+=/ Treat invalid input as octal 0
+=/ Any number with a digit of 8 or 9 is invalid
+=- Negative numbers are invalid
+=/ Ignore underscore (skip it)
+
+
+E
+  233 # octal
+= 2*8^2 + 3*8^1 + 3*8^0
+= 2*64  + 3*8   + 3*1
+= 128   + 24    + 3
+= 155
+
+10
+1 * 8^1 + 
+
+
+D
+Octal
+Octal#to_decimal
+
+A
+chars to array
+set 8 power counter
+map chars in reverse
+  if underscore, skip and move to next
+  if bad character, return 0
+  otherwise..
+  char to string * power counter
+  up the power counter
+  return the value
+.sum
+
+
+
+
+
+
+
+C

@@ -1,0 +1,58 @@
+
+
+P
+Write a program that can generate the lyrics of the 99 Bottles of Beer song. See the test suite for the entire song.
+Input: A number corresponding to the verse wanted. 
+Return: a string with the verse
+Output: nothing
+
+Requirements:
+=/ The verse referenses the current number and the next number of beers on the wall. 
+=/ Verse 1 should end with no more bottles of beer. 
+=/ Bottles should be singular and plural as appropriate
+=/ Special string for zero
+=/ Can intake two arguemnts, which concatenates the strings of the range of beers
+=/ Method called lyrics which does the whole song
+
+Assumptions
+No validation input
+Highest input number is 99
+
+
+E
+    expected = "3 bottles of beer on the wall, 3 bottles of beer.\n" \
+      "Take one down and pass it around, 2 bottles of beer on the wall.\n"
+    assert_equal expected, BeerSong.verse(3)
+
+
+D
+class BeerSong
+#verse
+#verses
+#lyrics
+
+
+A
+def initialize
+
+
+def verse
+  test if current number needs plural
+  test if next number needs plural
+  choose standard string to interpolate on
+  interpolate the string
+  return the string
+
+def verses
+  initialize verses array
+  loop through range
+  array << verse(num)
+  join and return array 
+  
+def lyrics
+  execute verses 99 to 0
+
+
+
+C
+

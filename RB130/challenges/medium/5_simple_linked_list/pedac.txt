@@ -1,0 +1,45 @@
+P ---------------
+Write a simple linked list implementation. 
+
+Requirements
+Each element in the list contains data and a "next" field pointing to the next element in the list of elements.
+Elements may contain a range of data such as the numbers 1-10
+Provide method to reverse the linked list
+Provide method to convert a linked list to and from an array.
+
+
+
+
+E ---------------
+A simple list is like an array, with diff methods
+Each element stores datum and position of next index
+
+
+
+
+D ---------------
+class Element
+new
+Element#datum
+Element#tail?
+Element#next
+
+class SimpleLinkedList
+      -containts Elements
+new
+SimpleLinkedList#size
+SimpleLinkedList#push
+SimpleLinkedList#empty?
+SimpleLinkedList#head
+SimpleLinkedList#from_a
+SimpleLinkedList#next
+
+A ---------------
+
+
+
+
+
+
+
+C ---------------

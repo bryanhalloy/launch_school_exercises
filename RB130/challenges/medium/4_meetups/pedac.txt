@@ -1,0 +1,88 @@
+P
+
+Input: a year, a month, a day of the week, and a descriptor
+Return value: An exact date (year, month day)
+Output: nothing
+
+Requirements:
+TA - construct objects that represent a meetup date.
+TA - Your object should be able to determine the exact date of the meeting in the specified month and year
+TA - The descriptors that may be given are strings: 'first', 'second', 'third', 'fourth', 'fifth', 'last', and 'teenth'.
+TA - The case of the strings is not important;
+TA - That is, every month has exactly one "teenth" Monday, one "teenth" Tuesday, etc. 
+TA - The fifth day of the month may not happen every month, but some meetup groups like that irregularity.
+TA - The days of the week are given by the strings 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', and 'Sunday'
+TA - a fifth day, if not available, should return nil
+TA - needs to work for leap years
+
+
+E
+if you ask for the 2nd Wednesday of May 2021, the object should be able to determine that the meetup for that month will occur on the 12th of May, 2021.
+
+
+D
+class Meetup(year, month)
+Meetup#day(day string, descriptor) -> date object
+
+
+
+
+
+
+A
+General gist is that i will start with the first of the given month, and keep adding days and keep testing each day if it meets the given criteria
+
+
+require date
+
+initialize
+  first_of_month_date = set new date object to first of given month year
+  set naive date to nil
+  set descriptor and dow to nil
+
+
+day (weekday, descriptior)
+  set new instance vars and downcase them
+  loop
+    return date if dow mathes && decriptor matches
+    return nil if date does not exist
+    else next day
+  reset instance vars
+  return date
+  end
+
+  dow_matches
+    date to dow = hash lookup weekday
+  end
+
+  descriptor_matches
+    set counter to zero
+      start with first day and add one to counter if 
+        if first/last type, 
+        dow matches
+        more work needed
+
+      need extra logic for teenth
+    return true/false
+
+  get_dow_target
+    hash lookup
+  
+  is_first
+  
+  is_second
+
+  is_third
+
+  is_fourth
+
+  is_fifth
+
+  is_teenth
+
+
+
+
+
+
+C
